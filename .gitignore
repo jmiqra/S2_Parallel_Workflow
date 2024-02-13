@@ -4,4 +4,6 @@ autolabel_model.hdf5
 
 /s2_par
 /test_images
+/train_images_4032
+/train_masks_4032
 

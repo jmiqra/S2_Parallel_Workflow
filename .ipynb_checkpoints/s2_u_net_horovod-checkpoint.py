@@ -231,6 +231,11 @@ print(X_train.shape, " shape ", y_train_cat.shape)
 
 BATCH_SIZE_PER_REPLICA = 16
 #tf.data and pipeline data
+
+# Convert data to TensorFlow tensors
+X_train = tf.convert_to_tensor(X_train, dtype=tf.float32)
+y_train_cat = tf.convert_to_tensor(y_train_cat, dtype=tf.int32)
+
 dataset = tf.data.Dataset.from_tensor_slices((X_train, y_train_cat))
 print("len dataset ",len(dataset))
 print("len list dataset",len(list(dataset)))
